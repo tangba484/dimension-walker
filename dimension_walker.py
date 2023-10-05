@@ -77,6 +77,51 @@ merged_df = pd.merge(merged_df, sp500_df, on='Date', how='left')
 
 apple = merged_df
 
+# 원 달러 환율 데이터 가져오기
+krwusd = yf.Ticker("KRW=X")
+
+exchange_rate_data = krwusd.history(start=one_year_ago, end=current_date, auto_adjust=True)
+exchange_rate_data['Date'] = pd.to_datetime(exchange_rate_data.index).strftime('%Y-%m-%d')
+exchange_rate_data.set_index('Date', inplace=True)
+
+# 인덱스(날짜)를 없애고 종가 열만 추출하여 Series로 변환
+close_prices = exchange_rate_data["Close"]
+
+# 위에서 생성한 close_prices 시리즈를 데이터프레임으로 변환
+close_prices_df = close_prices.to_frame()
+close_prices_df.rename(columns={'Close': 'Krwusd'}, inplace=True)
+
+# 'Date' 열을 기준으로 두 데이터프레임 병합
+close_prices_df.index = pd.to_datetime(close_prices_df.index)
+apple = apple.merge(close_prices_df, left_on='Date', right_index=True, how='inner')
+
+#국제유가 데이터 삽입
+wti_oil = yf.Ticker("CL=F")  # CL=F는 WTI 원유 선물 계약의 티커입니다.
+wti_oil_data = wti_oil.history(start=one_year_ago, end=current_date, auto_adjust=True)
+wti_oil_data['Date'] = pd.to_datetime(wti_oil_data.index).strftime('%Y-%m-%d')
+wti_oil_data.set_index('Date', inplace=True)
+
+close_prices = wti_oil_data["Close"]
+
+close_prices_df = close_prices.to_frame()
+close_prices_df.rename(columns={'Close': 'Wti'}, inplace=True)
+
+close_prices_df.index = pd.to_datetime(close_prices_df.index)
+apple = apple.merge(close_prices_df, left_on='Date', right_index=True, how='inner')
+
+# 금 가격 데이터 삽입
+gold = yf.Ticker("GC=F")  # GC=F는 금 선물 계약의 티커입니다.
+gold_data = gold.history(start=one_year_ago, end=current_date, auto_adjust=True)
+gold_data['Date'] = pd.to_datetime(gold_data.index).strftime('%Y-%m-%d')
+gold_data.set_index('Date', inplace=True)
+
+close_prices = gold_data["Close"]
+
+close_prices_df = close_prices.to_frame()
+close_prices_df.rename(columns={'Close': 'Gold'}, inplace=True)
+
+close_prices_df.index = pd.to_datetime(close_prices_df.index)
+apple = apple.merge(close_prices_df, left_on='Date', right_index=True, how='inner')
 print(apple)
 
 
