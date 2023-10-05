@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -58,3 +59,6 @@ plt.xlabel('날짜')
 plt.ylabel('주가')
 plt.legend()
 plt.show()
+=======
+print("hello World")
+>>>>>>> f7f476c4381f8117fd5e9a787ed4fe0515fbad95
