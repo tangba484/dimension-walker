@@ -1,9 +1,13 @@
-<<<<<<< HEAD
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
+from datetime import datetime, timedelta
+import datetime
+from yahoo_fin import stock_info as si
+import pandas_datareader as pdr
+
 
 # 한글 폰트 설정 (예: 나눔고딕 폰트 사용)
 plt.rcParams['font.family'] = 'NanumGothic'
@@ -12,9 +16,17 @@ plt.rcParams['font.family'] = 'NanumGothic'
 # 여기에서는 yfinance 라이브러리를 사용하여 데이터를 불러올 수 있습니다.
 
 import yfinance as yf
-apple = yf.download('AAPL', start='2023-01-01', end='2023-9-15')
 
-print(apple.columns)
+# datetime 모듈 사용해서 현재 날싸 불러오기
+
+current_date = datetime.datetime.now()
+one_year_ago = current_date - datetime.timedelta(days=365)
+
+
+
+apple = yf.download('AAPL', start=one_year_ago, end=current_date)
+
+
 # 데이터 전처리
 apple['Date'] = pd.to_datetime(apple.index)  # 인덱스를 날짜 열로 설정
 apple.set_index('Date', inplace=True)
@@ -26,39 +38,47 @@ apple['SMA_50'] = apple['Adj Close'].rolling(window=50).mean()
 apple['Returns'] = apple['Adj Close'].pct_change()
 apple = apple.dropna()
 
-# 종속 변수와 독립 변수 설정
-X = apple[['SMA_10', 'SMA_50', 'Returns']]
-y = apple['Adj Close']
+#나스닥 지수 데이터 가져오기
+nasdaq_data = si.get_data('^IXIC', one_year_ago, current_date)
 
-# 데이터 분할
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# 모델 학습
-model = LinearRegression()
-model.fit(X_train, y_train)
+# S&P 500 지수 데이터 가져오기
+sp500_data = si.get_data('^GSPC', one_year_ago, current_date)
 
-# 모델 평가
-train_score = model.score(X_train, y_train)
-test_score = model.score(X_test, y_test)
+nasdaq_data['Date'] = pd.to_datetime(nasdaq_data.index)  # 인덱스를 날짜 열로 설정
+nasdaq_data.set_index('Date', inplace=True)
 
-print(f'Training R-squared score: {train_score}')
-print(f'Test R-squared score: {test_score}')
+sp500_data['Date'] = pd.to_datetime(sp500_data.index)  # 인덱스를 날짜 열로 설정
+sp500_data.set_index('Date', inplace=True)
 
-# 주가 예측
-last_data = X[-1:].values
-predicted_price = model.predict(last_data)
+# 데이터를 DataFrame으로 변환
+nasdaq_df = pd.DataFrame(nasdaq_data)
+sp500_df = pd.DataFrame(sp500_data)
 
-print(f'다음 날 Apple 주식 종가 예측: {predicted_price[0]}')
 
-# 결과 시각화
-plt.figure(figsize=(12, 6))
-plt.plot(apple.index, apple['Adj Close'], label='실제 주가')
-plt.axvline(x=apple.index[-1], color='r', linestyle='--', linewidth=2, label='예측 시작일')
-plt.plot(apple.index[-1], predicted_price[0], marker='o', markersize=8, color='g', label='예측 주가')
-plt.xlabel('날짜')
-plt.ylabel('주가')
-plt.legend()
-plt.show()
-=======
-print("hello World")
->>>>>>> f7f476c4381f8117fd5e9a787ed4fe0515fbad95
+
+
+
+# 나스닥과 s&p500 지수에서 불필요한 열 제거
+nasdaq_df.drop(['open', 'high', 'low', 'close','volume', 'ticker'], axis=1, inplace=True)
+sp500_df.drop(['open', 'high', 'low', 'close','volume', 'ticker'], axis=1, inplace=True)
+
+# 열 이름 변경
+new_column_names = {'adjclose': 'nasdaq'}
+nasdaq_df.rename(columns=new_column_names, inplace=True)
+
+snp_column_names = {'adjclose': 'sp500'}
+sp500_df.rename(columns=snp_column_names, inplace=True)
+
+# 데이터프레임 합치기
+merged_df = pd.merge(apple, nasdaq_df, on='Date', how='left')
+merged_df = pd.merge(merged_df, sp500_df, on='Date', how='left')
+
+
+apple = merged_df
+
+print(apple)
+
+
+
+
