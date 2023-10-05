@@ -7,6 +7,7 @@ from datetime import datetime, timedelta
 import datetime
 from yahoo_fin import stock_info as si
 import pandas_datareader as pdr
+import michigan_consumer_sentiment_index as mcsi
 
 
 # 한글 폰트 설정 (예: 나눔고딕 폰트 사용)
@@ -64,10 +65,10 @@ nasdaq_df.drop(['open', 'high', 'low', 'close','volume', 'ticker'], axis=1, inpl
 sp500_df.drop(['open', 'high', 'low', 'close','volume', 'ticker'], axis=1, inplace=True)
 
 # 열 이름 변경
-new_column_names = {'adjclose': 'nasdaq'}
+new_column_names = {'adjclose': 'Nasdaq'}
 nasdaq_df.rename(columns=new_column_names, inplace=True)
 
-snp_column_names = {'adjclose': 'sp500'}
+snp_column_names = {'adjclose': 'S&P500'}
 sp500_df.rename(columns=snp_column_names, inplace=True)
 
 # 데이터프레임 합치기
@@ -124,6 +125,5 @@ close_prices_df.index = pd.to_datetime(close_prices_df.index)
 apple = apple.merge(close_prices_df, left_on='Date', right_index=True, how='inner')
 print(apple)
 
-
-
-
+csi = mcsi.getCSI()
+print(csi)
