@@ -1,0 +1,42 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from statsmodels.tsa.stattools import kpss
+
+
+
+def 차분해야하는리스트반환(df):
+    non_stationary_list = []
+    columnLength = len(df.columns)
+    for i in range(columnLength):
+        result = kpss(df.iloc[:, i], regression= 'c')
+        if result[1] > 0.05:
+            continue
+        else:
+            non_stationary_list.append(df.columns[i])
+    
+    return non_stationary_list
+
+def 차분안하는리스트반환(df):
+    stationary_list = []
+    columnLength = len(df.columns)
+    for i in range(columnLength):
+        result = kpss(df.iloc[:, i], regression= 'c')
+        
+        if result[1] > 0.05:
+            stationary_list.append(df.columns[i])
+    return stationary_list
+    
+    
+def 차분(df,non_stationary_list):
+    for i in non_stationary_list:
+        differenced_prices = df[i].diff().dropna()
+        df[i] = differenced_prices
+    
+    return df[1:]
+    
+def 표준화(df):
+    mean = df.mean()
+    std_dev = df.std()
+    standardized_data = (df - mean) / std_dev
+    return standardized_data
