@@ -129,6 +129,7 @@ def addCsi(df):
     # 새로운 csi_df 만들어주기
     culumns_name = ['CSI']
     csi_df = pd.DataFrame(0, index=str_index_list, columns= culumns_name)
+    csi_df['CSI'] = csi_df['CSI'].astype(float)
 
     # 날짜(전월)에 맞는 csi지수값 넣어주기
     for i in range(0,len(str_index_list)):
@@ -151,8 +152,8 @@ def addCsi(df):
         formatted_number_b = '{:02d}'.format(number_b)
         
         index_value = formatted_number_a + '-' + formatted_number_b
-        
-        csi_df.at[str_index_list[i],'CSI'] = csi[index_value]
+        csi_df.at[str_index_list[i], 'CSI'] = csi[index_value]
+
         
     csi_df['Date'] = df_index_list
     csi_df.set_index('Date', inplace=True)

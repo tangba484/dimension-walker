@@ -1,7 +1,8 @@
 import Stock
 import Scaling
 
-df = Stock.getStockDf('AAPL')
+ticker = "AAPL"
+df = Stock.getStockDf(ticker)
 df = Stock.addNasdaq(df)
 df = Stock.addSnp500(df)
 df = Stock.addKrwusd(df)
