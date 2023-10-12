@@ -12,4 +12,4 @@ df = Stock.addCsi(df)
 
 print(df)
 
-print(Scaling.MinMaxScaling(df))
+print(Scaling.RobustScaling(df))

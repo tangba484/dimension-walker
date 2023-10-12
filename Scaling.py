@@ -1,6 +1,8 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from sklearn.preprocessing import MaxAbsScaler
+from sklearn.preprocessing import RobustScaler
 from statsmodels.tsa.stattools import kpss
 from sklearn.preprocessing import MinMaxScaler
 
@@ -42,6 +44,7 @@ def 표준화(df):
     standardized_data = (df - mean) / std_dev
     return standardized_data
 
+<<<<<<< HEAD
 def MinMaxScaling(df):
 
     mMscaler = MinMaxScaler()
@@ -52,3 +55,18 @@ def MinMaxScaling(df):
     mMscaled_data = pd.DataFrame(mMscaled_data)
 
     return mMscaled_data
+=======
+def MaxAbsScaling(df):
+    scaler = MaxAbsScaler()
+    scaled_data = scaler.fit_transform(df)
+    scaled_df = pd.DataFrame(scaled_data, columns=df.columns)    
+    return scaled_df
+
+def RobustScaling(df):   
+    scaler = RobustScaler()    
+    scaled_data = scaler.fit_transform(df)    
+    scaled_df = pd.DataFrame(scaled_data, columns=df.columns)   
+    return scaled_df
+
+    
+>>>>>>> cbe5fc6eb327b274ad6c3060ef57900c696385a2
