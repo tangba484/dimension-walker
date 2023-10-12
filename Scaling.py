@@ -1,6 +1,8 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from sklearn.preprocessing import MaxAbsScaler
+from sklearn.preprocessing import RobustScaler
 from statsmodels.tsa.stattools import kpss
 
 
@@ -40,3 +42,17 @@ def 표준화(df):
     std_dev = df.std()
     standardized_data = (df - mean) / std_dev
     return standardized_data
+
+def MaxAbsScaling(df):
+    scaler = MaxAbsScaler()
+    scaled_data = scaler.fit_transform(df)
+    scaled_df = pd.DataFrame(scaled_data, columns=df.columns)    
+    return scaled_df
+
+def RobustScaling(df):   
+    scaler = RobustScaler()    
+    scaled_data = scaler.fit_transform(df)    
+    scaled_df = pd.DataFrame(scaled_data, columns=df.columns)   
+    return scaled_df
+
+    

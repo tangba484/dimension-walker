@@ -11,7 +11,4 @@ df = Stock.addCsi(df)
 
 print(df)
 
-print(Scaling.표준화(df))
-
-result = Scaling.차분해야하는리스트반환(df)
-print(Scaling.표준화(Scaling.차분(df,result)))
+print(Scaling.RobustScaling(df))
