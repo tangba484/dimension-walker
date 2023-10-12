@@ -123,7 +123,7 @@ close_prices_df.rename(columns={'Close': 'Gold'}, inplace=True)
 
 close_prices_df.index = pd.to_datetime(close_prices_df.index)
 apple = apple.merge(close_prices_df, left_on='Date', right_index=True, how='inner')
-print(apple)
+print(apple.columns)
 
 csi = mcsi.getCSI()
 print(csi)
