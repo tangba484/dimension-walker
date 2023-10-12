@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from statsmodels.tsa.stattools import kpss
-
+from sklearn.preprocessing import MinMaxScaler
 
 
 def 차분해야하는리스트반환(df):
@@ -21,6 +21,7 @@ def 차분안하는리스트반환(df):
     stationary_list = []
     columnLength = len(df.columns)
     for i in range(columnLength):
+        print(kpss(df.iloc[:, i], regression= 'c'))
         result = kpss(df.iloc[:, i], regression= 'c')
         
         if result[1] > 0.05:
@@ -40,3 +41,14 @@ def 표준화(df):
     std_dev = df.std()
     standardized_data = (df - mean) / std_dev
     return standardized_data
+
+def MinMaxScaling(df):
+
+    mMscaler = MinMaxScaler()
+    mMscaler.fit(df)
+
+    mMscaled_data = mMscaler.transform(df)
+
+    mMscaled_data = pd.DataFrame(mMscaled_data)
+
+    return mMscaled_data
