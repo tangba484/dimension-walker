@@ -127,3 +127,52 @@ print(apple.columns)
 
 csi = mcsi.getCSI()
 print(csi)
+
+#  apple 데이터프레임의 인덱스 열을 리스트로 가져오기
+apple_index_list = apple.index.tolist()
+
+str_index_list = []
+
+# str_index_list에 formating(년-월)한 날짜 넣기
+for i in apple_index_list:
+    timestamp = pd.Timestamp(i)
+
+    # Timestamp 객체를 문자열로 변환
+    timestamp_str = timestamp.strftime('%Y-%m')
+    
+    str_index_list.append(timestamp_str)
+
+# 새로운 csi_df 만들어주기
+culumns_name = ['CSI']
+csi_df = pd.DataFrame(0, index=str_index_list, columns= culumns_name)
+
+# 날짜(전월)에 맞는 csi지수값 넣어주기
+for i in range(0,len(str_index_list)):
+    
+    index_value = str_index_list[i]
+    string_to_split = index_value
+    split_result = string_to_split.split('-')
+    part1 = int(split_result[0])
+    part2 = int(split_result[1])
+    
+    if part2 == 1:
+        number_a = part1 - 1
+        number_b = 12
+    
+    else:
+        number_a = part1
+        number_b = part2 - 1
+        
+    formatted_number_a = '{:02d}'.format(number_a)
+    formatted_number_b = '{:02d}'.format(number_b)
+    
+    index_value = formatted_number_a + '-' + formatted_number_b
+    
+    csi_df.at[str_index_list[i],'CSI'] = csi[index_value]
+    
+# 완성된 csi_df 와 apple 결합해주기
+csi_df['Date'] = apple_index_list
+csi_df.set_index('Date', inplace=True)
+apple = pd.concat([apple, csi_df], axis=1)
+
+print(apple)
