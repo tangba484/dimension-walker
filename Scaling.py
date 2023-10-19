@@ -11,6 +11,8 @@ def 차분해야하는리스트반환(df):
     non_stationary_list = []
     columnLength = len(df.columns)
     for i in range(columnLength):
+        if df.columns[i] == "CSI":
+            continue
         result = kpss(df.iloc[:, i], regression= 'c')
         if result[1] > 0.05:
             continue
