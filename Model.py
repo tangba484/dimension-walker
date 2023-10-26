@@ -15,6 +15,7 @@ def lstm(X,Y):
 
     from tensorflow.keras.callbacks import EarlyStopping
     early_stop = EarlyStopping(monitor='val_loss', patience=5)
+    
     model.fit(x_train, y_train, 
             validation_data=(x_test, y_test),
             epochs=100, batch_size=16,
