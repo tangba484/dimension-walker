@@ -6,7 +6,7 @@ from yahoo_fin import stock_info as si
 import michigan_consumer_sentiment_index as mcsi
 
 current_date = datetime.datetime.now()
-one_year_ago = current_date - datetime.timedelta(days=365)
+one_year_ago = current_date - datetime.timedelta(days=500)
 
 def getStockDf(stockTicker):
 
