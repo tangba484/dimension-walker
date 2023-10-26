@@ -53,7 +53,7 @@ def MinMaxScaling(df):
 
     mMscaled_data = mMscaler.transform(df)
 
-    mMscaled_data = pd.DataFrame(mMscaled_data)
+    mMscaled_data = pd.DataFrame(mMscaled_data, columns=df.columns)
 
     return mMscaled_data
     
