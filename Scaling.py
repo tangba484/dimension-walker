@@ -48,12 +48,14 @@ def 표준화(df):
 
 def MinMaxScaling(df):
 
+    column_names = df.columns.tolist()
+
     mMscaler = MinMaxScaler()
     mMscaler.fit(df)
 
     mMscaled_data = mMscaler.transform(df)
 
-    mMscaled_data = pd.DataFrame(mMscaled_data)
+    mMscaled_data = pd.DataFrame(mMscaled_data, columns=column_names)
 
     return mMscaled_data
     
