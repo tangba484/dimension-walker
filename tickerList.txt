@@ -1,0 +1,600 @@
+1위
+애플 (Apple Inc.)
+AAPL | Technology | NASDAQ
+년초대비: 38%, 1년전: 29%, 3년전: 44%
+$2,825B
+(3,828조원)
+2위
+마이크로소프트 (Microsoft Corporation)
+MSFT | Technology | NASDAQ
+년초대비: 37%, 1년전: 45%, 3년전: 48%
+$2,460B
+(3,333조원)
+3위
+알파벳 A (Alphabet Inc.)
+GOOGL | Communication Services | NASDAQ
+년초대비: 56%, 1년전: 41%, 3년전: 76%
+$1,759B
+(2,384조원)
+4위
+아마존닷컴 (Amazon.com, Inc.)
+AMZN | Consumer Cyclical | NASDAQ
+년초대비: 55%, 1년전: 15%, 3년전: -25%
+$1,365B
+(1,850조원)
+5위
+엔비디아 (NVIDIA Corporation)
+NVDA | Technology | NASDAQ
+년초대비: 211%, 1년전: 295%, 3년전: 220%
+$1,159B
+(1,570조원)
+6위
+(Meta Platforms, Inc.)
+META | Communication Services | NASDAQ
+년초대비: 162%, 1년전: 147%, 3년전: 14%
+$834B
+(1,130조원)
+7위
+테슬라 (Tesla, Inc.)
+TSLA | Consumer Cyclical | NASDAQ
+년초대비: 104%, 1년전: 16%, 3년전: 70%
+$821B
+(1,113조원)
+8위
+버크셔해서웨이 (Berkshire Hathaway Inc.)
+BRK-A | Financial Services | NYSE
+년초대비: 12%, 1년전: 31%, 3년전: 61%
+$753B
+(1,021조원)
+9위
+일라이릴리 (Eli Lilly and Company)
+LLY | Healthcare | NYSE
+년초대비: 67%, 1년전: 88%, 3년전: 294%
+$579B
+(785조원)
+10위
+유나이티드헬스그룹 (UnitedHealth Group Incorporated)
+UNH | Healthcare | NYSE
+년초대비: 2%, 1년전: 8%, 3년전: 63%
+$499B
+(677조원)
+11위
+비자(V) (Visa Inc.)
+V | Financial Services | NYSE
+년초대비: 14%, 1년전: 33%, 3년전: 15%
+$492B
+(667조원)
+12위
+TSMC (Taiwan Semiconductor Manufactur)
+TSM | Technology | NYSE
+년초대비: 21%, 1년전: 41%, 3년전: -1%
+$469B
+(635조원)
+13위
+(Novo Nordisk A/S)
+NVO | Healthcare | NYSE
+년초대비: 51%, 1년전: 96%, 3년전: 177%
+$452B
+(613조원)
+14위
+엑슨모빌 (Exxon Mobil Corporation)
+XOM | Energy | NYSE
+년초대비: -0%, 1년전: 12%, 3년전: 217%
+$437B
+(593조원)
+15위
+제이피모건체이스 (JP Morgan Chase & Co.)
+JPM | Financial Services | NYSE
+년초대비: 10%, 1년전: 43%, 3년전: 44%
+$431B
+(584조원)
+16위
+월마트 (Walmart Inc.)
+WMT | Consumer Defensive | NYSE
+년초대비: 13%, 1년전: 22%, 3년전: 11%
+$430B
+(582조원)
+17위
+존슨앤드존슨 (Johnson & Johnson)
+JNJ | Healthcare | NYSE
+년초대비: -11%, 1년전: -4%, 3년전: 3%
+$377B
+(511조원)
+18위
+마스터카드 (Mastercard Incorporated)
+MA | Financial Services | NYSE
+년초대비: 14%, 1년전: 40%, 3년전: 13%
+$376B
+(510조원)
+19위
+브로드컴 (Broadcom Inc.)
+AVGO | Technology | NASDAQ
+년초대비: 58%, 1년전: 105%, 3년전: 131%
+$364B
+(493조원)
+20위
+프록터 앤 갬블 (Procter & Gamble Company (The))
+PG | Consumer Defensive | NYSE
+년초대비: -5%, 1년전: 16%, 3년전: 0%
+$341B
+(462조원)
+21위
+셰브론 (Chevron Corporation)
+CVX | Energy | NYSE
+년초대비: -9%, 1년전: 4%, 3년전: 120%
+$312B
+(424조원)
+22위
+오라클 (Oracle Corporation)
+ORCL | Technology | NYSE
+년초대비: 32%, 1년전: 70%, 3년전: 76%
+$298B
+(405조원)
+23위
+홈디포 (Home Depot, Inc. (The))
+HD | Consumer Cyclical | NYSE
+년초대비: -8%, 1년전: 4%, 3년전: 2%
+$293B
+(397조원)
+24위
+머크앤드컴퍼니 (Merck & Company, Inc.)
+MRK | Healthcare | NYSE
+년초대비: -6%, 1년전: 15%, 3년전: 36%
+$263B
+(357조원)
+25위
+애브비 (AbbVie Inc.)
+ABBV | Healthcare | NYSE
+년초대비: -8%, 1년전: 6%, 3년전: 68%
+$261B
+(354조원)
+26위
+어도비 시스템즈 (Adobe Inc.)
+ADBE | Technology | NASDAQ
+년초대비: 63%, 1년전: 92%, 3년전: 7%
+$254B
+(345조원)
+27위
+코스트코 홀세일 (Costco Wholesale Corporation)
+COST | Consumer Defensive | NASDAQ
+년초대비: 24%, 1년전: 22%, 3년전: 51%
+$250B
+(340조원)
+28위
+(Toyota Motor Corporation)
+TM | Consumer Cyclical | NYSE
+년초대비: 30%, 1년전: 32%, 3년전: 35%
+$243B
+(329조원)
+29위
+ASML (ASML Holding N.V. - New York Re)
+ASML | Technology | NASDAQ
+년초대비: 10%, 1년전: 51%, 3년전: 50%
+$236B
+(320조원)
+30위
+코카콜라 (Coca-Cola Company (The))
+KO | Consumer Defensive | NYSE
+년초대비: -17%, 1년전: -4%, 3년전: 4%
+$228B
+(309조원)
+31위
+알리바바 ADR (Alibaba Group Holding Limited)
+BABA | Consumer Cyclical | NYSE
+년초대비: -5%, 1년전: 11%, 3년전: -73%
+$223B
+(303조원)
+32위
+펩시코 (Pepsico, Inc.)
+PEP | Consumer Defensive | NASDAQ
+년초대비: -11%, 1년전: -6%, 3년전: 13%
+$219B
+(298조원)
+33위
+시스코 시스템즈 (Cisco Systems, Inc.)
+CSCO | Technology | NASDAQ
+년초대비: 13%, 1년전: 37%, 3년전: 33%
+$218B
+(295조원)
+34위
+뱅크오브아메리카 (Bank of America Corporation)
+BAC | Financial Services | NYSE
+년초대비: -19%, 1년전: -10%, 3년전: 4%
+$213B
+(289조원)
+35위
+(Astrazeneca PLC)
+AZN | Healthcare | NASDAQ
+년초대비: -1%, 1년전: 22%, 3년전: 22%
+$208B
+(282조원)
+36위
+(Novartis AG)
+NVS | Healthcare | NYSE
+년초대비: 7%, 1년전: 29%, 3년전: 10%
+$203B
+(275조원)
+37위
+액센츄어 (Accenture plc)
+ACN | Technology | NYSE
+년초대비: 13%, 1년전: 21%, 3년전: 31%
+$200B
+(272조원)
+38위
+세일즈포스닷컴 (Salesforce, Inc.)
+CRM | Technology | NYSE
+년초대비: 54%, 1년전: 44%, 3년전: -23%
+$200B
+(271조원)
+39위
+(Fomento Economico Mexicano S.A.)
+FMX | Consumer Defensive | NYSE
+년초대비: 36%, 1년전: 68%, 3년전: 76%
+$189B
+(256조원)
+40위
+써모 피셔 사이언티픽 (Thermo Fisher Scientific Inc)
+TMO | Healthcare | NYSE
+년초대비: -12%, 1년전: -4%, 3년전: 3%
+$186B
+(252조원)
+41위
+화이자 (Pfizer, Inc.)
+PFE | Healthcare | NYSE
+년초대비: -37%, 1년전: -24%, 3년전: -8%
+$185B
+(251조원)
+42위
+린드 (Linde plc)
+LIN | Basic Materials | NYSE
+년초대비: 16%, 1년전: 39%, 3년전: 57%
+$184B
+(250조원)
+43위
+컴캐스트 (Comcast Corporation)
+CMCSA | Communication Services | NASDAQ
+년초대비: 25%, 1년전: 53%, 3년전: -5%
+$181B
+(245조원)
+44위
+맥도날드 (McDonald's Corporation)
+MCD | Consumer Cyclical | NYSE
+년초대비: -6%, 1년전: 5%, 3년전: 10%
+$180B
+(245조원)
+45위
+(Advanced Micro Devices, Inc.)
+AMD | Technology | NASDAQ
+년초대비: 62%, 1년전: 82%, 3년전: 25%
+$175B
+(238조원)
+46위
+티모바일 (T-Mobile US, Inc.)
+TMUS | Communication Services | NASDAQ
+년초대비: 1%, 1년전: 7%, 3년전: 18%
+$169B
+(229조원)
+47위
+넷플릭스 (Netflix, Inc.)
+NFLX | Communication Services | NASDAQ
+년초대비: 21%, 1년전: 61%, 3년전: -34%
+$160B
+(216조원)
+48위
+(TotalEnergies SE)
+TTE | Energy | NYSE
+년초대비: 7%, 1년전: 38%, 3년전: 90%
+$159B
+(215조원)
+49위
+(HSBC Holdings, plc.)
+HSBC | Financial Services | NYSE
+년초대비: 28%, 1년전: 59%, 3년전: 96%
+$158B
+(214조원)
+50위
+애보트 래버러토리스 (Abbott Laboratories)
+ABT | Healthcare | NYSE
+년초대비: -17%, 1년전: -9%, 3년전: -18%
+$157B
+(213조원)
+51위
+PetroChina Company Limited
+PTR | Energy | NYSE
+0, 1년전: 47%, 3년전: -20%
+$157B
+(212조원)
+52위
+(SAP SE)
+SAP | Technology | NYSE
+년초대비: 25%, 1년전: 56%, 3년전: -19%
+$154B
+(209조원)
+53위
+다나허 (Danaher Corporation)
+DHR | Healthcare | NYSE
+년초대비: -11%, 1년전: -6%, 3년전: 5%
+$154B
+(209조원)
+54위
+월트 디즈니 (Walt Disney Company (The))
+DIS | Communication Services | NYSE
+년초대비: -3%, 1년전: -10%, 3년전: -33%
+$154B
+(209조원)
+55위
+인텔 (Intel Corporation)
+INTC | Technology | NASDAQ
+년초대비: 36%, 1년전: 42%, 3년전: -33%
+$154B
+(209조원)
+56위
+암젠 (Amgen Inc.)
+AMGN | Healthcare | NASDAQ
+년초대비: 8%, 1년전: 15%, 3년전: 19%
+$152B
+(206조원)
+57위
+인튜이트 (Intuit Inc.)
+INTU | Technology | NASDAQ
+년초대비: 37%, 1년전: 37%, 3년전: 52%
+$152B
+(206조원)
+58위
+나이키 (Nike, Inc.)
+NKE | Consumer Cyclical | NYSE
+년초대비: -15%, 1년전: 13%, 3년전: -23%
+$151B
+(204조원)
+59위
+웰스 파고 (Wells Fargo & Company)
+WFC | Financial Services | NYSE
+년초대비: -1%, 1년전: 1%, 3년전: 60%
+$149B
+(203조원)
+60위
+코노코필립스 (ConocoPhillips)
+COP | Energy | NYSE
+년초대비: 6%, 1년전: 7%, 3년전: 251%
+$149B
+(202조원)
+61위
+(HDFC Bank Limited)
+HDB | Financial Services | NYSE
+년초대비: -15%, 1년전: 2%, 3년전: 4%
+$147B
+(199조원)
+62위
+BHP 빌리턴 (BHP Group Limited)
+BHP | Basic Materials | NYSE
+년초대비: -9%, 1년전: 15%, 3년전: 21%
+$145B
+(197조원)
+63위
+필립 모리스 (Philip Morris International Inc)
+PM | Consumer Defensive | NYSE
+년초대비: -9%, 1년전: 8%, 3년전: 16%
+$143B
+(194조원)
+64위
+핀듀오듀오 (PDD Holdings Inc.)
+PDD | Consumer Cyclical | NASDAQ
+년초대비: 30%, 1년전: 90%, 3년전: 25%
+$140B
+(191조원)
+65위
+텍사스인스트루먼츠 (Texas Instruments Incorporated)
+TXN | Technology | NASDAQ
+년초대비: -8%, 1년전: 1%, 3년전: -1%
+$140B
+(190조원)
+66위
+캐터필러 (Caterpillar, Inc.)
+CAT | Industrials | NYSE
+년초대비: 12%, 1년전: 49%, 3년전: 65%
+$140B
+(190조원)
+67위
+사노피 ADR (Sanofi)
+SNY | Healthcare | NASDAQ
+년초대비: 13%, 1년전: 39%, 3년전: 7%
+$137B
+(186조원)
+68위
+유나이티드파슬서비스 (United Parcel Service, Inc.)
+UPS | Industrials | NYSE
+년초대비: -11%, 1년전: -3%, 3년전: -12%
+$132B
+(179조원)
+69위
+버라이즌 커뮤니케이션 (Verizon Communications Inc.)
+VZ | Communication Services | NYSE
+년초대비: -22%, 1년전: -14%, 3년전: -49%
+$129B
+(176조원)
+70위
+모건 스탠리 (Morgan Stanley)
+MS | Financial Services | NYSE
+년초대비: -9%, 1년전: 2%, 3년전: 53%
+$128B
+(174조원)
+71위
+(International Business Machines)
+IBM | Technology | NYSE
+년초대비: -2%, 1년전: 18%, 3년전: 14%
+$128B
+(174조원)
+72위
+유니온 퍼시픽 (Union Pacific Corporation)
+UNP | Industrials | NYSE
+년초대비: 0%, 1년전: 8%, 3년전: 1%
+$126B
+(171조원)
+73위
+(Blackstone Inc.)
+BX | Financial Services | NYSE
+년초대비: 40%, 1년전: 21%, 3년전: 89%
+$126B
+(171조원)
+74위
+앤섬 (Anthem, Inc.)
+ANTM | Healthcare | NYSE
+0, 1년전: 44%, 3년전: 104%
+$125B
+(169조원)
+75위
+퀄컴 (QUALCOMM Incorporated)
+QCOM | Technology | NASDAQ
+년초대비: -1%, 1년전: 0%, 3년전: -14%
+$124B
+(168조원)
+76위
+하니웰 (Honeywell International Inc.)
+HON | Industrials | NASDAQ
+년초대비: -14%, 1년전: 6%, 3년전: 5%
+$122B
+(165조원)
+77위
+어플라이드 머티어리얼즈 (Applied Materials, Inc.)
+AMAT | Technology | NASDAQ
+년초대비: 45%, 1년전: 86%, 3년전: 118%
+$121B
+(164조원)
+78위
+제너럴 일렉트릭 (General Electric Company)
+GE | Industrials | NYSE
+년초대비: 67%, 1년전: 116%, 3년전: 156%
+$121B
+(164조원)
+79위
+유니레버 ADR (Unilever PLC)
+UL | Consumer Defensive | NYSE
+년초대비: -5%, 1년전: 10%, 3년전: -24%
+$120B
+(163조원)
+80위
+브리스톨 마이어스 스퀴브 (Bristol-Myers Squibb Company)
+BMY | Healthcare | NYSE
+년초대비: -22%, 1년전: -18%, 3년전: -9%
+$117B
+(159조원)
+81위
+(S&P Global Inc.)
+SPGI | Financial Services | NYSE
+년초대비: 9%, 1년전: 25%, 3년전: 1%
+$116B
+(157조원)
+82위
+보잉 (Boeing Company (The))
+BA | Industrials | NYSE
+년초대비: -3%, 1년전: 42%, 3년전: 10%
+$115B
+(156조원)
+83위
+서비스나우 (ServiceNow, Inc.)
+NOW | Technology | NYSE
+년초대비: 42%, 1년전: 49%, 3년전: 8%
+$115B
+(155조원)
+84위
+(BP p.l.c.)
+BP | Energy | NYSE
+년초대비: 15%, 1년전: 34%, 3년전: 132%
+$113B
+(154조원)
+85위
+로우스 (Lowe's Companies, Inc.)
+LOW | Consumer Cyclical | NYSE
+년초대비: -2%, 1년전: 1%, 3년전: 13%
+$112B
+(153조원)
+86위
+아메리칸 익스프레스 (American Express Company)
+AXP | Financial Services | NYSE
+년초대비: 2%, 1년전: 11%, 3년전: 42%
+$111B
+(150조원)
+87위
+록히드 마틴 (Lockheed Martin Corporation)
+LMT | Industrials | NYSE
+년초대비: -9%, 1년전: 11%, 3년전: 13%
+$111B
+(150조원)
+88위
+넥스테라 (NextEra Energy, Inc.)
+NEE | Utilities | NYSE
+년초대비: -35%, 1년전: -25%, 3년전: -29%
+$110B
+(149조원)
+89위
+디어 (Deere & Company)
+DE | Industrials | NYSE
+년초대비: -11%, 1년전: 5%, 3년전: 61%
+$110B
+(149조원)
+90위
+(Anheuser-Busch Inbev SA Sponsor)
+BUD | Consumer Defensive | NYSE
+년초대비: -11%, 1년전: 18%, 3년전: -10%
+$107B
+(146조원)
+91위
+소니 ADR (Sony Group Corporation)
+SONY | Technology | NYSE
+년초대비: 12%, 1년전: 35%, 3년전: 14%
+$106B
+(144조원)
+92위
+레이시온 테크놀로지스 (Raytheon Technologies Corporati)
+RTX | Industrials | NYSE
+년초대비: -27%, 1년전: -12%, 3년전: 21%
+$106B
+(144조원)
+93위
+부킹홀딩스 (Booking Holdings Inc. Common St)
+BKNG | Consumer Cyclical | NASDAQ
+년초대비: 46%, 1년전: 76%, 3년전: 60%
+$105B
+(142조원)
+94위
+(AT&T Inc.)
+T | Communication Services | NYSE
+년초대비: -22%, 1년전: -2%, 3년전: -32%
+$103B
+(139조원)
+95위
+(Equinor ASA)
+EQNR | Energy | NYSE
+년초대비: -4%, 1년전: 0%, 3년전: 134%
+$102B
+(139조원)
+96위
+골드만 삭스 (Goldman Sachs Group, Inc. (The))
+GS | Financial Services | NYSE
+년초대비: -10%, 1년전: 5%, 3년전: 44%
+$102B
+(138조원)
+97위
+오토매틱 데이터 프로세싱 (Automatic Data Processing, Inc.)
+ADP | Industrials | NASDAQ
+년초대비: 4%, 1년전: 10%, 3년전: 64%
+$101B
+(138조원)
+98위
+TJX 컴퍼니 (TJX Companies, Inc. (The))
+TJX | Consumer Cyclical | NYSE
+년초대비: 11%, 1년전: 39%, 3년전: 53%
+$101B
+(137조원)
+99위
+프로로지스 (Prologis, Inc.)
+PLD | Real Estate | NYSE
+년초대비: -3%, 1년전: 9%, 3년전: 1%
+$101B
+(137조원)
+100위
+리오틴토 (Rio Tinto Plc)
+RIO | Basic Materials | NYSE
+년초대비: -12%, 1년전: 13%, 3년전: 1%
+$101B
+(137조원)
