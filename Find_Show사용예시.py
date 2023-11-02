@@ -3,18 +3,9 @@ import Scaling
 import Model
 import Evaluation
 import Find_Show
-
-ticker_list = []
-
-with open("tickerList.txt", "r", encoding="utf-8") as file:
-    lines = file.readlines()
-
-for i in range(2, len(lines), 6):
-    line = lines[i]
-    parts = line.split("|")
-    if len(parts) > 1:
-        ticker = parts[0].strip()
-        ticker_list.append(ticker)
+import numpy as np
+import util
+ticker_list = util.getTikerList();
 
 for ticker in ticker_list:
     df = Stock.getStockDf(ticker)
@@ -24,11 +15,6 @@ for ticker in ticker_list:
     df = Stock.addWti(df)
     df = Stock.addGold(df)
     df = Stock.addCsi(df)
-
-    import numpy as np
-    import pandas as pd
-    from sklearn.decomposition import PCA
-
 
     mean = np.mean(df['Adj Close'])
     std = np.std(df['Adj Close'])

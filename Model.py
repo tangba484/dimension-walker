@@ -1,6 +1,7 @@
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import GRU, Dense, Dropout , LSTM, Input
+from tensorflow.keras.callbacks import EarlyStopping
 
 def lstm(X,Y):
     split = -200
@@ -13,7 +14,6 @@ def lstm(X,Y):
     model.compile(loss='mse', optimizer='adam', metrics=['mae'])
     model.summary()
 
-    from tensorflow.keras.callbacks import EarlyStopping
     early_stop = EarlyStopping(monitor='val_loss', patience=5)
     
     model.fit(x_train, y_train, 

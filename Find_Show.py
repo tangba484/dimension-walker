@@ -2,6 +2,7 @@ import Stock
 import Scaling
 import Model
 import Evaluation
+import util
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -20,7 +21,6 @@ def Find_Show(df,ticker , mean , std):
     df = df.drop('Adj Close',axis = 1)
 
     mae_list = []
-    
 
     for k in range(10,13):
         n_components = k
@@ -34,22 +34,13 @@ def Find_Show(df,ticker , mean , std):
         answer_np = answer.to_numpy()
 
         window_size = 20
-        
-        def make_sequence_dataset(feature , label , window_size):
-            feature_list = []
-            label_list = []
-
-            for i in range(len(feature) - window_size):
-                feature_list.append(feature[i:i+window_size])
-                label_list.append(label[i+window_size])
-            return np.array(feature_list) , np.array(label_list)
-
-        X,Y = make_sequence_dataset(df_np , answer_np , window_size)
+    
+        X,Y = util.make_sequence_dataset(df_np , answer_np , window_size)
 
         pca_pred = Model.lstm(X,Y)
         y_test = Y[-200:]
 
-        X,Y = make_sequence_dataset(raw_data.to_numpy() , answer_np , window_size)
+        X,Y = util.make_sequence_dataset(raw_data.to_numpy() , answer_np , window_size)
         raw_pred = Model.lstm(X,Y)
         
         mae_list.append(Evaluation.Mae(y_test , pca_pred))
