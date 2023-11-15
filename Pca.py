@@ -6,7 +6,8 @@ from pydmd import DMD
 from util import make_sequence_dataset
 import Model
 
-def getPred(df,window_size=5,split=-80):
+def getPred(df):
+    window_size = Model.window_size
     mean = np.mean(df['Adj Close'])
     std = np.std(df['Adj Close'])
     data = Scaling.표준화(df)
@@ -19,10 +20,9 @@ def getPred(df,window_size=5,split=-80):
 
     df_np = df.to_numpy()
     target_np = target.to_numpy()
-
     X,Y = make_sequence_dataset(df_np , target_np , window_size)
 
-    pca_pred = Model.lstm(X,Y,split=split)
+    pca_pred = Model.lstm(X,Y)
     pca_pred = pca_pred*std + mean
 
     return pca_pred;

@@ -4,8 +4,7 @@ import pandas as pd
 import Scaling
 import Model
 
-def getPred(df,window_size=5,split = 1):
-
+def getPred(df):
 
     mean = np.mean(df['Adj Close'])
     std = np.std(df['Adj Close'])
