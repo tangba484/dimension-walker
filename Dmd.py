@@ -27,6 +27,6 @@ def getPred(df):
     X,Y = make_sequence_dataset(modes , target_np , window_size)
     Dmd_pred = Model.lstm(X,Y)
     Dmd_pred = Dmd_pred * std + mean
-    Dmd_pred = np.roll(Dmd_pred, -2)
+    # Dmd_pred = np.roll(Dmd_pred, -2)
 
     return Dmd_pred

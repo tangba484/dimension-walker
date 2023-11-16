@@ -3,8 +3,8 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import GRU, Dense, Dropout , LSTM, Input
 from tensorflow.keras.callbacks import EarlyStopping
 
-window_size = 5
-split = -98
+window_size = 4
+split = -100
 
 def lstm(X,Y):        
         global split
