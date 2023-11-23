@@ -13,7 +13,8 @@ def getPred(df):
     target = pd.DataFrame(data , columns= ['Adj Close'])
     target_np = target.to_numpy()
 
-    y_test = target_np[Model.split:]
+    # y_test = target_np[Model.split:]
+    y_test = target_np[:]
 
     y_test = y_test * std + mean
 
