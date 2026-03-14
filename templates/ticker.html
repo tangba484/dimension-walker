@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+
+{% block title %}{{ ticker }} 결과{% endblock %}
+
+{% block content %}
+    <h1>{{ ticker }} 차트</h1>
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% else %}
+        <p>
+            생성 시각: {{ run_info["created_at"][:-9] }} /
+            Window: {{ run_info["window_size"] }} /
+            Horizon: {{ run_info["horizon"] }}
+        </p>
+
+        <div class="metric-box">
+            <h3>성능 지표</h3>
+
+            {% if run_info["mae_no_pca"] is not none %}
+                <p>No PCA - MAE: {{ "%.4f"|format(run_info["mae_no_pca"]) }} / RMSE: {{ "%.4f"|format(run_info["rmse_no_pca"]) }}</p>
+            {% else %}
+                <p>No PCA - 지표 없음</p>
+            {% endif %}
+
+            {% if run_info["mae_pca"] is not none %}
+                <p>PCA - MAE: {{ "%.4f"|format(run_info["mae_pca"]) }} / RMSE: {{ "%.4f"|format(run_info["rmse_pca"]) }}</p>
+            {% else %}
+                <p>PCA - 지표 없음</p>
+            {% endif %}
+        </div>
+
+        <div class="checkbox-group">
+            <label>
+                <input type="checkbox" id="toggleNoPca" checked>
+                No PCA 보기
+            </label>
+            <label>
+                <input type="checkbox" id="togglePca" checked>
+                PCA 보기
+            </label>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="stockChart"></canvas>
+        </div>
+
+        <script>
+            const actualDates = {{ dates|tojson }};
+            const actualPrices = {{ actual_prices|tojson }};
+            const noPcaTest = {{ no_pca_test|tojson }};
+            const noPcaFuture = {{ no_pca_future|tojson }};
+            const pcaTest = {{ pca_test|tojson }};
+            const pcaFuture = {{ pca_future|tojson }};
+
+            const actualLabels = actualDates;
+            const horizon = 15;
+            const actualLength = actualLabels.length;
+            const testStartIndex = actualLength - horizon;
+
+            const noPcaTestSeries = Array(actualLength).fill(null);
+            const pcaTestSeries = Array(actualLength).fill(null);
+
+            for (let i = 0; i < horizon; i++) {
+                noPcaTestSeries[testStartIndex + i] = noPcaTest[i];
+                pcaTestSeries[testStartIndex + i] = pcaTest[i];
+            }
+
+            const futureLabels = [];
+            for (let i = 1; i <= horizon; i++) {
+                futureLabels.push("Future+" + i);
+            }
+
+            const allLabels = actualLabels.concat(futureLabels);
+
+            const actualSeries = actualPrices.concat(Array(horizon).fill(null));
+            const noPcaTestFull = noPcaTestSeries.concat(Array(horizon).fill(null));
+            const pcaTestFull = pcaTestSeries.concat(Array(horizon).fill(null));
+            const noPcaFutureFull = Array(actualLength).fill(null).concat(noPcaFuture);
+            const pcaFutureFull = Array(actualLength).fill(null).concat(pcaFuture);
+
+            const ctx = document.getElementById("stockChart").getContext("2d");
+
+            const chart = new Chart(ctx, {
+                type: "line",
+                data: {
+                    labels: allLabels,
+                    datasets: [
+                        {
+                            label: "Actual Close",
+                            data: actualSeries,
+                            borderWidth: 2,
+                            tension: 0.2
+                        },
+                        {
+                            label: "Test Prediction (No PCA)",
+                            data: noPcaTestFull,
+                            borderWidth: 2,
+                            tension: 0.2
+                        },
+                        {
+                            label: "Future Prediction (No PCA)",
+                            data: noPcaFutureFull,
+                            borderWidth: 2,
+                            tension: 0.2
+                        },
+                        {
+                            label: "Test Prediction (PCA)",
+                            data: pcaTestFull,
+                            borderWidth: 2,
+                            tension: 0.2
+                        },
+                        {
+                            label: "Future Prediction (PCA)",
+                            data: pcaFutureFull,
+                            borderWidth: 2,
+                            tension: 0.2
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            onClick: () => {}
+                        }
+                    }
+                }
+            });
+
+            const toggleNoPca = document.getElementById("toggleNoPca");
+            const togglePca = document.getElementById("togglePca");
+
+            function updateChartVisibility() {
+                chart.data.datasets[1].hidden = !toggleNoPca.checked;
+                chart.data.datasets[2].hidden = !toggleNoPca.checked;
+                chart.data.datasets[3].hidden = !togglePca.checked;
+                chart.data.datasets[4].hidden = !togglePca.checked;
+                chart.update();
+            }
+
+            toggleNoPca.addEventListener("change", updateChartVisibility);
+            togglePca.addEventListener("change", updateChartVisibility);
+        </script>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block title %}홈{% endblock %}
+
+{% block content %}
+    <h1>AI 기반 주가 예측 웹 서비스 </h1>
+    <p>티커를 검색하여 PCA 적용 모델과 원본 데이터 모델의 성능 비교를 해볼수있습니다.</p>
+
+    <form action="{{ url_for('search') }}" method="post" class="search-form" autocomplete="off">
+        <div class="autocomplete-wrapper">
+            <input
+            type="text"
+            id="tickerInput"
+            name="ticker"
+            placeholder="티커 입력 (예: AAPL, TSLA, NVDA)"
+            required
+            >
+            <div id="autocompleteList" class="autocomplete-list"></div>
+        </div>
+        
+        <button type="submit">검색</button>
+    </form>
+    {% if error == "invalid_ticker" %}
+    <p style="color:red; margin-top:10px;">
+        올바르지 않은 종목코드입니다.
+    </p>
+    {% endif %}        
+
+    <div class="sample-links">
+        <p>샘플 티커:</p>
+        <a href="{{ url_for('ticker_page', ticker='AAPL') }}">AAPL</a>
+        <a href="{{ url_for('ticker_page', ticker='TSLA') }}">TSLA</a>
+    </div>
+
+    <script>
+        const tickerInput = document.getElementById("tickerInput");
+        const autocompleteList = document.getElementById("autocompleteList");
+
+        tickerInput.addEventListener("input", async function () {
+            const query = this.value.trim();
+
+            if (!query) {
+                autocompleteList.innerHTML = "";
+                autocompleteList.style.display = "none";
+                return;
+            }
+
+            try {
+                const response = await fetch(`/api/ticker-suggest?q=${encodeURIComponent(query)}`);
+                const items = await response.json();
+
+                autocompleteList.innerHTML = "";
+
+                if (items.length === 0) {
+                    autocompleteList.style.display = "none";
+                    return;
+                }
+
+                items.forEach(item => {
+                    const div = document.createElement("div");
+                    div.className = "autocomplete-item";
+                    div.innerHTML = `
+                        <span class="ticker">${item.ticker}</span>
+                        <span class="name">${item.name}</span>
+                    `;
+
+                    div.addEventListener("click", function () {
+                        tickerInput.value = item.ticker;
+                        autocompleteList.innerHTML = "";
+                        autocompleteList.style.display = "none";
+                    });
+
+                    autocompleteList.appendChild(div);
+                });
+
+                autocompleteList.style.display = "block";
+            } catch (error) {
+                autocompleteList.innerHTML = "";
+                autocompleteList.style.display = "none";
+            }
+        });
+
+        document.addEventListener("click", function (e) {
+            if (!e.target.closest(".autocomplete-wrapper")) {
+                autocompleteList.innerHTML = "";
+                autocompleteList.style.display = "none";
+            }
+        });
+    </script>
+{% endblock %}

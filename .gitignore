@@ -1,0 +1,12 @@
+# python
+__pycache__/
+*.pyc
+
+# venv
+venv/
+.venv/
+clean_venv/
+
+# editor
+.vscode/
+.idea/
